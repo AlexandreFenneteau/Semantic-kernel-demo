@@ -1,0 +1,23 @@
+[project]
+name = "semantickernel"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0.0"
+dependencies = [
+    "semantic-kernel (>=1.24.1,<2.0.0)",
+    "notebook (>=7.3.3,<8.0.0)",
+    "azure-monitor-opentelemetry-exporter (>=1.0.0b35,<2.0.0)",
+    "streamlit (>=1.43.2,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (>=2.2.4,<3.0.0)",
+    "matplotlib (>=3.10.1,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
