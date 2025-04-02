@@ -1,6 +1,12 @@
 # Semantic kernel
 ## Activate env
-`.\.venv\Scripts\activate`
+
+Avec un python 3.12
+```console
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+```
 
 ## Intro
 `streamlit run 00-intro_multiagent.py`
@@ -21,6 +27,13 @@
 `streamlit run 00-intro_multiagent.py`
 
 # Smolagent
+
+Avec un python 3.13
+```console
+python -m venv .venv-smolagent
+.\..venv-smolagent\Scripts\activate
+pip install -r requirements-smolagents.txt
+```
 
 ## Launch telemetry server
 `python -m phoenix.server.main serve`
