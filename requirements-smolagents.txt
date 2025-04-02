@@ -1,0 +1,3 @@
+smolagents[openai,telemetry]
+python-dotenv
+sqlalchemy

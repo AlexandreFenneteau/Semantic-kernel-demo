@@ -27,10 +27,10 @@ from sqlalchemy import (
 
 from smolagents import tool, CodeAgent, AzureOpenAIServerModel
 
-endpoint = os.getenv("ENDPOINT_URL", None)  
-model_id = os.getenv("DEPLOYMENT_NAME", None)  
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", None)  
+model_id = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME", None)  
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY", None)  
-api_version= os.getenv("AZURE_OPENAI_API_VERSION", None)
+api_version= "2024-05-01-preview"
 
 model = AzureOpenAIServerModel(
     model_id = model_id,
@@ -131,9 +131,9 @@ sql_engine.description = updated_description
 agent = CodeAgent(tools=[sql_engine],
                   model=model)
 
-# gen = agent.run("Can you give me the name of the client who got the most expensive receipt and the amount of receipt?")
-gen = agent.run("Can you give me the name of the client who got the most expensive receipt and the amount of receipt?", stream=True)
-for i in gen:
-    print(i)
+gen = agent.run("Can you give me the name of the client who got the most expensive receipt and the amount of receipt?")
+# gen = agent.run("Can you give me the name of the client who got the most expensive receipt and the amount of receipt?", stream=True)
+# for i in gen:
+#     print(i)
 #agent.run("Which waiter got more total money from tips?")
 

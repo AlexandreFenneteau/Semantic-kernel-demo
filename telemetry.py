@@ -1,4 +1,7 @@
 import logging
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 from azure.monitor.opentelemetry.exporter import (
     AzureMonitorLogExporter,
@@ -21,7 +24,7 @@ from opentelemetry.trace import set_tracer_provider
 
 
 # Replace the connection string with your Application Insights connection string
-connection_string = "InstrumentationKey=25ea5abb-371b-4c9d-ad15-e4136b3d69e4;IngestionEndpoint=https://francecentral-1.in.applicationinsights.azure.com/;LiveEndpoint=https://francecentral.livediagnostics.monitor.azure.com/;ApplicationId=31051365-4ad6-4320-bb30-7eb071b3f679"
+connection_string = os.getenv("INSIGHT_CONNECTION_STRING")
 
 # Create a resource to represent the service/sample
 resource = Resource.create({ResourceAttributes.SERVICE_NAME: "telemetry-application-insights-quickstart"})
