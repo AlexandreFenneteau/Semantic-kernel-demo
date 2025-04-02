@@ -33,8 +33,8 @@ present_agent_name = "Presentateur"
 avatars = {bootcamp_agent_name: r"C:\Users\AlexandreFenneteau\Travail\bootcamp\semantic_kernel\assets\logo-organizer.png",
            present_agent_name: r"C:\Users\AlexandreFenneteau\Travail\bootcamp\semantic_kernel\assets\logo-presenter.png"}
 
-BOOTCAMP_AGENT_INSTRUCTIONS = f"You want to make {present_agent_name} do a presentation about 'Semantic Kernel' and try to convince him to do it. When you have what you want only, you mention that you agree by saying 'Je suis d'accord'. You stay brief in your messages, with maximum 2 sentences. You speak French."
-PRESENTER_AGENT_INSTRUCTIONS = f"You want to do a presentation on 'Hugging Face smolagent' framework and try to convince the other agent to do so. After 2 asking, you conceide to the view of {bootcamp_agent_name}. You stay brief in your messages, with maximum 2 sentences. You speack French."
+BOOTCAMP_AGENT_INSTRUCTIONS = f"You want to make {present_agent_name} do a presentation about building AI agents using the middleware 'Semantic Kernel' only and try to convince him to do it. When {present_agent_name} conceides to do a presentation on 'Semantic Kernel' you mention that you agree by saying 'Je suis d'accord'. You stay brief in your messages, with maximum 2 sentences. You speak French."
+PRESENTER_AGENT_INSTRUCTIONS = f"You want to do a presentation about building AI agents but with 'Hugging Face smolagent' framework and try to convince the other agent to do so. After 2 asking, you conceide to the view of {bootcamp_agent_name}. You stay brief in your messages, with maximum 2 sentences. You speack French."
 
 termination_keyword = "stop"
 non_termination_keyword = "continue"
